@@ -1,3 +1,4 @@
+const fs = require('fs');
 const express = require('express');
 const fileUpload = require('express-fileupload');
 const pdfParse = require('pdf-parse');
@@ -17,6 +18,15 @@ app.post('/extract-text', (req, res) => {
 
   pdfParse(req.files.pdfFile).then((result) => {
     res.send(result.text);
+
+    const newText = result.text;
+
+    fs.writeFileSync('./newFile/latestInput.txt', newText, (err) => {
+      if (err) {
+        console.error(err);
+      }
+      // file written successfully
+    });
   });
 });
 
