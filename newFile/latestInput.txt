@@ -1,147 +1,250 @@
 
 
-UTBILDNING
-
-2020 - 2022
-
-Examinerad Frontend developer KYH, Stockholm
-
-
-UTBILDNING
-
-1992-1995		Handelsprogrammet - Inriktning 
-samhälle
-
-
-ANSTÄLLNINGAR
-
-
-LIA på Addcode nov 2021 - april 2022
-
-Utveckling av hemsidor i Wordpress miljö.
-
-Less, ACF, custom-post-types. 
-
-
-2022 Frilans projekt för StreetArtMarket.
-
-
-2014- 		Danslärare, Danscenter Fryshuset.
-
-Afro-Amerikanska dansstilar, hiphop och locking på 
-2-årig yrkesutbildning och hobby klasser, 
-
-(1999-2014 Danscenter Stockholm)
-
-
-2011-2016 		Danslärare, DOCH, Dans- & 
-cirkushögskolan. Anställd som specialpedagog, 
-utbildning för framtida pedagoger och dansare. 
-
-
-
-2013-2021		Danslärare, House of Shapes
-
-
-
-2006-2015	Danslärare  / Mentor. Åsa folkhögskola, 
-Sköldinge. Ansvarig för hiphop på street tbildningen. 
-
-
-2006- Kurs- utbildnings ansvarig och pedagog på 
-högskolor/ universitet/ privatskolor och gymnasium. 
-Schemaläggning och planering för utbildningen även 
-ansvarig för rekrytering. 
-
- 
-
-2007-2011	Vice Vd, Ordförande. Föreningen 
-Freshest. Stockholm.  
-
-Konstnärlig ledare, producent för events och projekt.
-
-Kassa ansvarig. Rekryktering av medlemmar, 
-bokföring och löneutbetalningar.
-
- 
-Målsättning
-
-
-Jag vill vidare bredda mina kunskaper inom 
-
-programmering / utveckling. Få mer erfarenhet
-
-inom yrket.
-
-Mitt mål är att ständigt utvecklas.
-
-Skapa fantastiska system och digitala 
-
-användar upplevelser för användare, inkluderande 
-
-produkter och kreativa lösningar.    
-Robert Wägar
-
-
-
-Frontend-, WebbUtvecklare
-
-
-Inspiration leder till ideér som sätter
-
-igång våra tankar, som i sin tur skapar
-
-nya kreativa, orginella användbara 
-
-lösningar för framtidens och vardagens 
-problem. 
-
-
-Kontakt Info:
-
-
-
-Telefon
-
-+46 72 310 32 33
-
-
-
-Epost:
-
-robertwagar@gmail.com
-
-
-
-Referenser lämnas på begäran.
-
-
-KUNSKAPER (inom frontend)
-
-
-
-HTML
-
-CSS/SCSS
-
-JAVASCRIPT
-
-REACT
-
-FRAMER-MOTION
-
-ANIMEJS
-
-NEXT.JS
-
-GIT
-
-REST API / GRAPHQL
-
-FIGMA
-
-TRELLO/ASANA
-
-NODE.JS, TYPESCRIPT, MongoDB, EXPRESS, 
-FIREBASE, MySQL, WORDPRESS, LESS, PHP, VUE, 
-C#, JAVA
+Overview of main components in Git.
+
+With DVCS, all users have their local clone of 
+the entire repository.
+
+Everything local exists on your machine and 
+can differ from what’s on the remote repository.
+
+Commits, branches, and tags together build up 
+the entire history, while the Working Tree reflects 
+the file set currently under development.
+REMOTE
+Working Tree
+UNTRACKED
+TRACKED
+Mental model
+IGNORED
+fg45n
+14ko3
+origin/main
+@Stjaertfena | git-init.com
+stash@{0}
+stash@{1}
+/build 
+/lib 
+*.log
+2f6u7
+cool-feature
+TIME
+HEAD
+v1.0
+main
+fg45n
+14ko3
+main
+TRACKED
+L 
+O 
+C 
+A 
+L
+v1.0
+(origin) – bare
+Staging Area (Index)
+DVCS = Distributed Version Control System
+PATCHTREE
+C0C0
+C1C1
+C2
+
+REMOTE
+Working Tree
+UNTRACKED
+TRACKED
+Main actions
+IGNORED
+C0
+C1
+origin/main
+@Stjaertfena | git-init.com
+stash@{0}
+stash@{1}
+/build 
+/lib 
+*.log
+fetch
+push
+commit
+restoreadd
+restore --staged 
+add
+clean
+stash
+pull
+switch
+C2
+cool-feature
+TIME
+HEAD
+v1.0
+main
+$ git <command> -—help —-web
+mv / rm
+C0
+C1
+main
+C3
+initclone
+TRACKED
+L 
+O 
+C 
+A 
+L
+v1.0
+(origin) – bare
+Staging Area (Index)
+In Git, most actions are performed locally on 
+your machine.
+
+Git has a rich set of commands which are 
+divided into high-level (“porcelain”) and low-
+level (“plumbing”) commands.
+
+Generally, “porcelain” commands are only 
+needed, and it’s what you see here!
+
+Remove unused code
+Init repo
+Alexis Määttä Vinkler
+
+git-init.com
+Git | Reflog
+7ecc9
+main
+4f83c
+a1856
+HEAD
+ea27a
+Scaffold project
+Refactor app
+00e38
+Install dependency
+Reflog allows browsing of orphaned commits that are no 
+longer part of your general commit history.
+
+Reflogs record changes made to tips of branches and other 
+references in a local repository and can be viewed stand-
+alone or together with the regular log.
+Orphaned 
+commits
+Stand-alone reflog
+(zsh)
+$ git-init.com (main): git reflog 
+00e38c3 (HEAD -> main) HEAD@{0}: commit: Install dependency 
+4f83cf0 HEAD@{1}: checkout: moving from feature/test to main 
+ea27a9c HEAD@{2}: commit: Remove unused code 
+a18566c HEAD@{3}: commit: Refactor app 
+4f83cf0 HEAD@{4}: checkout: moving from main to feature/test 
+4f83cf0 HEAD@{5}: commit: Scaffold project 
+7ecc9dc HEAD@{6}: commit (initial): Init repo
+Reflog and log combined
+(zsh)
+$ git-init.com (main): git log --graph --reflog --oneline 
+* 00e38c3 (HEAD -> main) Install dependency 
+| * ea27a9c Remove unused code 
+| * a18566c Refactor app 
+|/ 
+* 4f83cf0 Scaffold project 
+* 7ecc9dc Init repo 
+
+Alexis Määttä Vinkler
+
+git-init.com
+Start case
+Reset and revert are two commands 
+used to manipulate the Git history, but 
+they work in fundamentally different 
+ways.
+
+Consider below history, and compare 
+how the commands differ.
+Post reset
+Reset updates your branch by moving 
+the tip to a pre-existing commit, generally 
+back in time. 
+Here, the tip of master has been reset 
+from C5 to C1.
+
+$ git reset --hard o3u9n
+Post revert
+Revert creates a new commit that 
+reverts the changes made by another 
+commit.
+
+Here, commit C1 has been reverted by 
+the creation of C6.
+
+$ git revert o3u9n
+o3u9n
+C1
+master
+C2
+14ko3
+o/master
+2f6u7
+C3
+Config change
+Improvement 1
+Improvement 2
+t67jk
+C4
+Merge
+wr43h
+C5
+Hotfix
+fg45n
+C0
+Initial commit
+HEAD
+feature
+s5e79
+C6
+Revert “Config change”
+o3u9n
+C1
+master
+C2
+14ko3
+o/master
+2f6u7
+C3
+Config change
+Improvement 1
+Improvement 2
+t67jk
+C4
+Merge
+wr43h
+C5
+Hotfix
+fg45n
+C0
+Initial commit
+HEAD
+feature
+o3u9n
+C1
+master
+C2
+14ko3
+o/master
+2f6u7
+C3
+Config change
+Improvement 1
+Improvement 2
+t67jk
+C4
+Merge
+wr43h
+C5
+Hotfix
+fg45n
+C0
+Initial commit
+HEAD
+feature
